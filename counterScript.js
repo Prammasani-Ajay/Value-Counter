@@ -27,8 +27,11 @@ buttons.appendChild(incr_btn).innerHTML = "+"
 var x = 0;
 function decrementFun(){
     let val = (x -= 1)
-    if(x<0){
+    if(x<=0){
         value.setAttribute('style','font-size:100px;text-align:center;color:red')
+    }
+    if(x==0){
+        value.setAttribute('style','font-size:100px;text-align:center;color:black')
     }
     div.appendChild(value).innerHTML = `${val}`
 }
@@ -36,6 +39,9 @@ function increamentFun(){
     let val1 = (x += 1)
     if(x>0){
         value.setAttribute('style','font-size:100px;text-align:center;color:green')
+    }
+    if(x==0){
+        value.setAttribute('style','font-size:100px;text-align:center;color:black')
     }
     div.appendChild(value).innerHTML = `${val1}`
 }
